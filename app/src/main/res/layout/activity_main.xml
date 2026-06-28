@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity" >
+
+    <ImageButton
+        android:id="@+id/butQR"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:onClick="HandleClick"
+        android:scaleType="fitCenter"
+        android:src="@drawable/qrccode"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/butProd"
+        android:layout_width="104dp"
+        android:layout_height="64dp"
+        android:layout_alignTop="@+id/butQR"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/butQR"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:onClick="HandleClick"
+        android:scaleType="fitCenter"
+        android:src="@drawable/barcode"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/butOther"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignTop="@+id/butProd"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/butProd"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:onClick="HandleClick"
+        android:scaleType="fitCenter"
+        android:src="@drawable/jost"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/butQR"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/black"
+        android:text=" 👉 وضعیت "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvStatus"
+        android:layout_marginTop="10dp"
+        android:autoLink="web"
+        android:text=" نتیجه: "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
